@@ -9,6 +9,7 @@
   .header .menu{display:block; width:100%; height:150px; margin:0px; padding:0px;}
   .header .menu li{display: inline-block; width:19%; margin:0px; padding:0px;}
   .header .menu li a{display: block; width:100%; margin:10px; padding:10px; text-align: center; text-decoration: none; color:black;}
+  #map{display:block; width:80%;height:350px;}
   </style>
   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e367bde69aaf5c8a9dbcaaad807cd1f4"></script>
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
@@ -16,7 +17,7 @@
   	$(function(){
   		var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
   	    mapOption = { 
-  	        center: new kakao.maps.LatLng(33.450701, 126.570667), // 지도의 중심좌표
+  	        center: new kakao.maps.LatLng(35.16064685339714, 128.11362367620896), // 지도의 중심좌표
   	        level: 3 // 지도의 확대 레벨
   	    };
 	
@@ -41,9 +42,12 @@
 </head>
 <body>
   	<h3><a href="http://kko.to/6DA9_tE40" target="_blank">경남 진주시 호탄동 761-7</a></h3>
-  	<div id="map" style="width:100%;height:350px;"></div>
-	<p><em>지도를 클릭해주세요!</em></p> 
-	<p id="result"></p>
+  	<div id="map"></div>
+	<div id="point" style="display:none;">
+		<p><em>지도를 클릭해주세요!</em></p> 
+		<p id="result"></p>
+	</div>
+	
 </body>
 </html>
 
