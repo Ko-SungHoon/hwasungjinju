@@ -3,23 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>화성냉동 진주점</title>
-  <style>
-  .header{display:block; width:100%; height:150px; margin:0px; padding:0px;}
-  .header .menu{display:block; width:100%; height:150px; margin:0px; padding:0px;}
-  .header .menu li{display: inline-block; width:19%; margin:0px; padding:0px;}
-  .header .menu li a{display: block; width:100%; margin:10px; padding:10px; text-align: center; text-decoration: none; color:black;}
-  </style>
+  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+  <script>
+  $(function(){
+	  $(".headerInc").load("/header.html");
+  });
+  </script>
 </head>
 <body>
-  	<div class="header">
-  		<ul class="menu">
-  			<li><a href="/">홈</a></li>
-  			<li><a href="/hwasungjinju/1.html">회사소개</a></li>
-  			<li><a href="/hwasungjinju/2.html">오시는 길</a></li>
-  			<li><a href="/hwasungjinju/3.html">업무소개</a></li>
-  			<li><a href="/hwasungjinju/4.html">화성써모</a></li>
-  		</ul>
-  	</div>
+	<div class="headerInc" style="display:block; width:100%; margin:0px; padding:0px;"></div>
 </body>
 </html>
