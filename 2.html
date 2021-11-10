@@ -20,6 +20,20 @@
 			level: 3
 		};
 		var map = new kakao.maps.Map(container, options);
+		
+		kakao.maps.event.addListener(map, 'click', function(mouseEvent) {        
+		    
+		    // 클릭한 위도, 경도 정보를 가져옵니다 
+		    var latlng = mouseEvent.latLng;
+		    
+		    var message = '클릭한 위치의 위도는 ' + latlng.getLat() + ' 이고, ';
+		    message += '경도는 ' + latlng.getLng() + ' 입니다';
+		    
+		    var resultDiv = document.getElementById('result'); 
+		    resultDiv.innerHTML = message;
+		    
+		});
+
   	});
 	</script>
 </head>
