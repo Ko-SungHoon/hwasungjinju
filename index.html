@@ -17,6 +17,9 @@
   	function pageOpen(file){
   		$(".content").load(file);
   	}
+		function fn_test(el){
+	alert($(el).parent("td").prev().children("a").text());
+}
   	</script>
 </head>
 <body>
@@ -29,6 +32,15 @@
   			<li><a href="javascript:pageOpen('/hwasungjinju/4.html');">화성써모</a></li>
   		</ul>
   	</div>
+	
+	<table>
+	<tr>
+		<td><a href="javascript:;" onclick="fn_test(this);">test1</a></td>
+		<td><a href="javascript:;" onclick="fn_test(this);">test2</a></td>
+		<td><a href="javascript:;" onclick="fn_test(this);">test3</a></td>
+	</tr>
+</table>
+
   	<div class="content">
   	
   	</div>
