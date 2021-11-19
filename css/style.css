@@ -1,6 +1,8 @@
  body{background:#1B2442;}
 .header{display:block; width:100%; height:150px; margin:0px; padding:0px;}
-.header .menu{display:block; width:100%; height:150px; margin:0px; padding:0px;}
+.header .menu{display:block; width:100%; height:150px; margin:0px; padding:0px; } 
 .header .menu li{display: inline-block; width:19%; margin:0px; padding:0px;}
+.header .menu li:hover{background:#4A5072;}
 .header .menu li a{display: block; width:100%; margin:10px; padding:10px; text-align: center; text-decoration: none; color:white; font-weight:bold;}
-.content{display: block; widht:80%; margin:auto; padding:0px;}
+.content{display: block; widht:80%; margin:auto; padding:0px; color:white;}
+.content a{color:white; text-decoration:none;}
