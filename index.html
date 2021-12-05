@@ -3,16 +3,28 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
+  <title>화성냉동 진주점</title>
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
   <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e367bde69aaf5c8a9dbcaaad807cd1f4&libraries=services"></script>
   <link rel="stylesheet" href="./css/style.css">
   	<script>
-  	$(function(){
-  		$(".images li a").animate({
-  			opacity : 1
-  		}, 3000);
-  	});
   	function pageOpen(file){
+  		if($(".mobMenu").css("display") != "none"){
+  			$(".menu").css("display", "none");  			
+  		}
+  		$(".subNavi").css("display", "block");
+  		
+  		if(file == './html/1.html'){
+  			$(".title").text('회사소개');
+  			document.title = '화성냉동 진주점 > 회사소개';
+  		}else if(file == './html/2.html'){
+  			$(".title").text('오시는 길');
+  			document.title = '화성냉동 진주점 > 오시는 길';
+  		}else if(file == './html/3.html'){
+  			$(".title").text('업무소개');
+  			document.title = '화성냉동 진주점 > 업무소개';
+  		}
+  		
   		$(".content").load(file);
   	}
 	function fn_test(el){
@@ -43,8 +55,9 @@
   			</li>
   		</ul>
   	</div>
-	
-
+  	<div class="subNavi" style="display:none;">
+  		<h3 class="title"></h3>
+  	</div>
   	<div class="content">
   		<ul class="images">
   			<li>
