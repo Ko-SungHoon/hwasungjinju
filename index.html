@@ -4,31 +4,55 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
   <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e367bde69aaf5c8a9dbcaaad807cd1f4"></script>
+  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e367bde69aaf5c8a9dbcaaad807cd1f4&libraries=services"></script>
   <link rel="stylesheet" href="./css/style.css">
   	<script>
+  	$(function(){
+  		$(".images li a").animate({
+  			opacity : 1
+  		}, 3000);
+  	});
   	function pageOpen(file){
   		$(".content").load(file);
   	}
-		function fn_test(el){
-	alert($(el).parent("td").next().children("a").text());
-}
+	function fn_test(el){
+		alert($(el).parent("td").next().children("a").text());
+	}
+	
+	function toggleMobMenu(){
+		if($(".menu").css("display") == "none"){
+			$(".menu").css("display", "block");
+		}else{
+			$(".menu").css("display", "none");
+		}
+	}
   	</script>
 </head>
 <body>
 	<div class="header">
+		<a href="javascript:void(-1);" onclick="toggleMobMenu();" class="mobMenu">메뉴</a>
   		<ul class="menu">
   			<li><a href="/hwasungjinju/">홈</a></li>
   			<li><a href="javascript:pageOpen('./html/1.html');">회사소개</a></li>
   			<li><a href="javascript:pageOpen('./html/2.html');">오시는 길</a></li>
   			<li><a href="javascript:pageOpen('./html/3.html');">업무소개</a></li>
-  			<li><a href="http://www.hwasungthermo.co.kr/" target="_blank">화성써모</a></li>
+  			<li>
+  				<a href="http://www.hwasungthermo.co.kr/" target="_blank" title="새 창으로 열립니다.">화성써모
+  					<img src="./images/icon/newtab.png" class="newtab">
+  				</a>
+  			</li>
   		</ul>
   	</div>
 	
 
   	<div class="content">
-  	
+  		<ul class="images">
+  			<li>
+  				<a href="javascript:void(0);">
+  					<img src="./images/main.PNG">
+  				</a>
+  			</li>
+  		</ul>  		
   	</div>
 </body>
 </html>
