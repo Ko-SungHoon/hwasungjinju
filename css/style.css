@@ -2,7 +2,6 @@
 body a{/* color:white; */ color:black; text-decoration:none;}
 .header{display:block; width:100%; height:150px; margin:0px; padding:0px;}
 .header .menu{display:block; width:100%; height:150px; margin:0px; padding:0px; } 
-.header .menu li:hover > a{color:white;}
 .header .menu li a{display: block; width:100%; 
 	text-align: center; text-decoration: none; color:black; /* color:white; */ font-weight:bold;}
 .content{display: block; widht:80%; margin:auto; padding:0px; /* color:white; */}
@@ -28,6 +27,7 @@ body a{/* color:white; */ color:black; text-decoration:none;}
 	.mobMenu{display:none;}
 	.header .menu li{display: inline-block; width:19%; margin:10px 0px 10px 0px; padding:10px 0px 10px 0px;}
 	.header .menu li:hover{background:#4A5072; }
+	.header .menu li:hover > a{color:white;}
 }
 @media all and (max-width:768px) {
 	.mobMenu{display:block;}
