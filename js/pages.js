@@ -27,7 +27,7 @@ function fn_htmls(page){
                 </tr>        
             </table>
 
-            <div id="map"></div>            
+                  
         `;
 
     }else if(page == 'work'){
