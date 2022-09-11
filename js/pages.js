@@ -19,7 +19,7 @@ function fn_htmls(page){
                 </colgroup>
                 <tr>
                     <th>주소</th>
-                    <td class="left"><a href="http://kko.to/0sBrLQzQU" target="_blank">경남 진주시 가좌동 1640</a></td>
+                    <td class="left"><a href="http://kko.to/0sBrLQzQU" target="_blank">경남 진주시 가좌동 1640 <img src="./images/icon/newtab.png" class="newtab"></a></td>
                 </tr>
                 <tr>
                     <th>연락처</th>
