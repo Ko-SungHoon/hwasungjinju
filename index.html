@@ -1,71 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width">
-  <title>화성냉동 진주점</title>
-  <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=e367bde69aaf5c8a9dbcaaad807cd1f4&libraries=services"></script>
-  <link rel="stylesheet" href="./css/style.css">
-  	<script>
-  	function pageOpen(file){
-  		if($(".mobMenu").css("display") != "none"){
-  			$(".menu").css("display", "none");  			
-  		}
-  		$(".subNavi").css("display", "block");
-  		
-  		if(file == './html/1.html'){
-  			$(".title").text('회사소개');
-  			document.title = '화성냉동 진주점 > 회사소개';
-  		}else if(file == './html/2.html'){
-  			$(".title").text('오시는 길');
-  			document.title = '화성냉동 진주점 > 오시는 길';
-  		}else if(file == './html/3.html'){
-  			$(".title").text('업무소개');
-  			document.title = '화성냉동 진주점 > 업무소개';
-  		}
-  		
-  		$(".content").load(file);
-  	}
-	function fn_test(el){
-		alert($(el).parent("td").next().children("a").text());
-	}
-	
-	function toggleMobMenu(){
-		if($(".menu").css("display") == "none"){
-			$(".menu").css("display", "block");
-		}else{
-			$(".menu").css("display", "none");
-		}
-	}
-  	</script>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=yes,maximum-scale=10">
+
+<meta name="title" content="화성진주">
+<meta name="author" content="화성진주">
+<meta name="keywords" content="화성진주">
+<meta name="description" content="화성진주">
+<script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=e367bde69aaf5c8a9dbcaaad807cd1f4&libraries=services"></script>
+<script src="./js/pages.js" type="text/javascript"></script>
+<script src="./js/common.js" type="text/javascript"></script>
+
+<link href="./css/default.css" rel="stylesheet">
+<link href="./css/common.css" rel="stylesheet">
+
+<title>화성진주</title>
 </head>
 <body>
-	<div class="header">
-		<a href="javascript:void(-1);" onclick="toggleMobMenu();" class="mobMenu">메뉴</a>
-  		<ul class="menu">
-  			<li><a href="/hwasungjinju/">홈</a></li>
-  			<li><a href="javascript:pageOpen('./html/1.html');">회사소개</a></li>
-  			<li><a href="javascript:pageOpen('./html/2.html');">오시는 길</a></li>
-  			<li><a href="javascript:pageOpen('./html/3.html');">업무소개</a></li>
-  			<li>
-  				<a href="http://www.hwasungthermo.co.kr/" target="_blank" title="새 창으로 열립니다.">화성써모
-  					<img src="./images/icon/newtab.png" class="newtab">
-  				</a>
-  			</li>
-  		</ul>
-  	</div>
-  	<div class="subNavi" style="display:none;">
-  		<h3 class="title"></h3>
-  	</div>
-  	<div class="content">
-  		<ul class="images">
-  			<li>
-  				<a href="javascript:void(0);">
-  					<img src="./images/main.PNG">
-  				</a>
-  			</li>
-  		</ul>  		
-  	</div>
+
+    <header>
+        <ul class="menu depth1">
+            <li><a href="javascript:fn_getPage('main');">홈</a></li>
+            <li><a href="javascript:fn_getPage('intro');">회사소개</a></li>
+            <li><a href="javascript:fn_getPage('location');">오시는길</a></li>
+            <li><a href="javascript:fn_getPage('work');">업무소개</a></li>
+            <li><a href="http://www.hwasungthermo.co.kr/" target="_blank">화성써모</a></li>
+        </ul>        
+    </header>
+
+    <h3 id="titleStr"></h3>
+
+    <div class="content">
+
+    </div>
+
+    <script>
+        fn_getPage('main'); 
+    </script>
 </body>
 </html>
